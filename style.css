@@ -1,4 +1,6 @@
-/* Base Styles */
+/* =========================
+   Base Styles
+========================= */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -6,7 +8,9 @@ body {
   color: #002b5c;
 }
 
-/* Fixed Header */
+/* =========================
+   Fixed Header & Navigation
+========================= */
 .fixed-header {
   position: fixed;
   top: 0;
@@ -63,7 +67,9 @@ body {
   cursor: pointer;
 }
 
-/* Hero Section with Carousel */
+/* =========================
+   Hero Section with Carousel
+========================= */
 .hero {
   position: relative;
   margin-top: 80px;            /* offset for fixed header */
@@ -79,13 +85,20 @@ body {
 .carousel .slides img {
   width: 100%;
   height: 100%;
-  display: none;
-  object-fit: cover;           /* fills hero section */
+  object-fit: cover;
   object-position: center;
+  opacity: 0;                          /* start invisible */
+  transform: translateX(30px);         /* slight offset for gallery effect */
+  transition: opacity 1s ease, transform 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .carousel .slides img.active {
-  display: block;
+  opacity: 1;                          /* fade in */
+  transform: translateX(0);            /* slide into place */
+  z-index: 1;
 }
 
 /* Navigation arrows */
@@ -103,6 +116,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 3;
+  cursor: pointer;
 }
 
 .carousel-control-prev { left: 20px; }
@@ -128,7 +142,9 @@ body {
   border-radius: 10px;
 }
 
-/* Section Styling */
+/* =========================
+   Section Styling
+========================= */
 section {
   padding: 40px;
   margin: 30px auto;
@@ -143,7 +159,9 @@ section {
   line-height: 1.5;
 }
 
-/* Project Cards */
+/* =========================
+   Project Cards
+========================= */
 .project-card {
   background: #e6f0ff;
   padding: 20px;
@@ -158,7 +176,9 @@ section {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* Profile Photo */
+/* =========================
+   Profile Photo
+========================= */
 .profile-photo {
   width: 200px;
   height: auto;
@@ -174,7 +194,9 @@ section {
   border: 3px solid #00c6ff;
 }
 
-/* Social Links */
+/* =========================
+   Social Links
+========================= */
 .social ul {
   list-style: none;
   padding: 0;
@@ -202,7 +224,9 @@ section {
   transform: scale(1.05);
 }
 
-/* Back to Top Button */
+/* =========================
+   Back to Top Button
+========================= */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -224,7 +248,9 @@ section {
   transform: scale(1.1);
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
   text-align: center;
   padding: 20px;
@@ -233,7 +259,9 @@ footer {
   border-top: 3px solid #00c6ff;
 }
 
-/* Responsive Adjustments */
+/* =========================
+   Responsive Adjustments
+========================= */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
