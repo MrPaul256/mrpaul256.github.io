@@ -1,84 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Official website of MrPaul256 - ICT teacher, developer, and digital innovator from Uganda.">
-<meta name="keywords" content="MrPaul256, Paul Ssekanaabi, ICT Uganda, computer science, teacher, developer">
-<meta name="author" content="MrPaul256">
-  <title>Mr. Paul AI</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: black;
-      color: #f0f3f7;
-      text-align: center;
-      margin: 0;
-      padding: 20px;
-    }
-    header {
-      background: darkcyan;
-      color: white;
-      padding: 1px;
-      border-radius: 50px;
-          }
-          h1{
-            font-size: 20px;
-          }
-          h2{
-            color: #f91880;
-          }
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      color: #555;
-    }
-  </style>
+  <title>Mr. Paul 🇺🇬</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
 
-  <header>
-    <h1>🇺🇬 Mr. Paul's AI Assistant 🇺🇬</h1>
+  <!-- Fixed Header -->
+  <header class="fixed-header">
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="logo.png" alt="Mr. Paul Logo" class="logo">
+        <span class="site-title">Mr. Paul 🇺🇬</span>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#social">Social Media</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <marquee><h2>🇺🇬✨ Welcome to Mr. Paul’s AI Assistant! ✨🇺🇬  
-    | Crafted with passion by @Paul_Ssekanaabi (Mr. Paul🇺🇬), a proud Ugandan Tech Innovator.  
-    Your trusted space for guidance, Computer support and literacy, personal research, and discovering a lot of stuff you didn't know...  
-    Feel at home and enjoy the experience! ❤️💚💛🤍</marquee>
+  <section class="hero">
+  <div class="carousel">
+    <div class="slides">
+      <img src="img1.jpeg" alt="Teaching ICT" class="active">
+      <img src="img2.png" alt="Building Projects">
+      <img src="img3.png" alt="Digital Creativity">
+	<img src="img4.png" alt="Digital Creativity">
+    </div>
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+  </div>
 
-                    <script>
-      (function (w, d, o, f) {
-        w[o] =
-          w[o] ||
-          function (config) {
-            var js = d.createElement("script");
-            js.src = f;
-            js.async = true;
-            js.onload = function () {
-              var e = d.createElement("div");
-              e.id = o;
-              d.body.appendChild(e);
-              w.init_chatislav
-                ? w.init_chatislav(o, config)
-                : console.error("chatislav init function not available.");
-            };
-            d.body.appendChild(js);
-          };
-      })(window, document, "ctslv_bbl", "https://chatislav.ai/api/static/chat-bot/index.js"
-      );
-      ctslv_bbl({ base_url: "https://chatislav.ai/api", token: "dba1b6cd-e031-49b8-b12e-e87e190bcd07" });
-    </script>
-      
+  <!-- Overlay text inside hero -->
+  <div class="hero-text">
+    <h1>Welcome to My Digital Portfolio</h1>
+    <p>I'm Paul Ssekanabi (Mr. Paul 🇺🇬)<br>
+    Empowering Education Through Technology</p>
+  </div>
+</section>
 
+
+
+
+<!-- About -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+<img src="profile.jpeg" alt="Mr. Paul Photo" class="profile-photo">
+    <p class="justify">Hi, I'm <strong>Paul Ssekanaabi</strong>, widely known as <strong>Mr. Paul 🇺🇬</strong>, an ICT educator, technology enthusiast, and digital creator from Uganda with a passion for empowering people through technology.
+
+I currently serve as the <strong>Head of ICT at Holy Family Secondary School, Namayumba</strong>, where I teach Computer Studies, manage the school's ICT infrastructure, support teachers and students with technology, and develop digital solutions that improve learning and administration.
+
+Beyond the classroom, I enjoy building websites, designing graphics, livestreaming major events, creating educational content, and exploring emerging technologies such as Artificial Intelligence, networking, cybersecurity, and cryptocurrency. I believe technology should solve real problems, simplify work, and create opportunities for everyone.
+
+Through <strong>Mr. Paul ICT Academy</strong>, my mission is to help students, teachers, and professionals gain practical digital skills that prepare them for today's technology-driven world. I believe learning is most effective when it is practical, engaging, and accessible.
+
+Whether I'm teaching, troubleshooting a network, designing a website, creating content, or mentoring future tech enthusiasts, my goal remains the same:
+
+<strong>To inspire, educate, and empower people through technology.</strong>
+
+<strong>Learn. Practice. Succeed.</strong></p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <h3>1. School Report Card System</h3>
+      <p>Developed using Microsoft Excel, VBA automation, and Mail Merge workflows.</p>
+    </div>
+    <div class="project-card">
+      <h3>2. AI Educational Assistant Chatbot</h3>
+      <p>Developed using Artificial Intelligence, Chatislav AI, GitHub Pages, and web integration technologies.</p>
+    </div>
+ <div class="project-card">
+      <h3>3. School Network Infrastructure & ICT Management System</h3>
+      <p>Developed using LAN technologies, TP-Link networking equipment, routers, switches, server management, and IT administration tools.</p>
+    </div>
+ <div class="project-card">
+      <h3>4. Online Student Voting System</h3>
+      <p>Developed using Google Forms, Google Sheets, and digital authentication workflows.</p>
+    </div>
+ <div class="project-card">
+      <h3>5. Mr. Paul ICT Academy Platform</h3>
+      <p>Developed using HTML, CSS, JavaScript, GitHub Pages, and responsive web design techniques.</p>
+    </div>
+<div class="project-card">
+      <h3>6. Mr. Paul 🇺🇬 Livestreaming & Digital Media Brand</h3>
+      <p>Developed using YouTube Live, Streamlabs, mobile broadcasting technologies, and digital content production tools.</p>
+    </div>
+<div class="project-card">
+      <h3>7. School ICT Extension Programme & Holiday Boot Camp</h3>
+      <p>Developed using digital learning platforms, ICT training resources, computer practical sessions, and educational technology tools.</p>
+    </div>	 
+ </section>
+
+  <!-- Social -->
+  <section id="social" class="social">
+    <h2>Connect with Me</h2>
+    <ul>
+      <li><a href="https://wa.me/256759438124" target="_blank">WhatsApp</a></li>
+      <li><a href="mailto:ssekanaabipaul256@gmail.com">Email</a></li>
+      <li><a href="https://x.com/Paul_Ssekanaabi" target="_blank">X (Twitter)</a></li>
+      <li><a href="https://youtube.com/@Paul_Ssekanaabi" target="_blank">YouTube</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>© 2026 Mr. Paul 🇺🇬. All Rights Reserved</p>
+<p><strong>Let's Connect :👉👉</STRONG><a href="https://wa.me/256759438124" class="number-link">+256 759 438 124</a> <strong>|</strong> <a href="mailto:ssekanaabipaul256@gmail.com" class="number-link">
+  ssekanaabipaul256@gmail.com</a>
+</p>
+  </footer>
+
+  <script src="script.js"></script>
+<button id="backToTop">↑ Back to Top</button>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4ff;
+  color: #002b5c;
+}
+
+/* Fixed Header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #003b8e;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00c6ff;
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  margin-top: 80px;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #003b8e, #007bff);
+  color: white;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Section Styling */
+section {
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Project Cards */
+.project-card {
+  background: #e6f0ff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  border-left: 6px solid #003b8e;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Social Links */
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social ul li {
+  margin: 10px 0;
+}
+
+.social ul li a {
+  display: inline-block;
+  background: #003b8e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.social ul li a:hover {
+  background: #00c6ff;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #003b8e;
+  color: #fff;
+  border-top: 3px solid #00c6ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #002b5c;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+.justify {
+  text-align: justify;
+  line-height: 1.5;
+}
+.profile-photo {
+  width: 200px;       /* adjust size */
+  height: auto;       /* keeps proportions */
+  border-radius: 15px; /* rounded rectangle */
+  float: left;        /* places photo on the left side */
+  margin: 0 20px 10px 0; /* spacing between photo and text */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Strong Hover Effect */
+.profile-photo:hover {
+  transform: scale(1.1); /* zooms in slightly */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* strong shadow glow */
+  border: 3px solid #00c6ff; /* adds glowing border in your blue theme */
+}
+
+.number-link {
+  background: #003b8e;   /* your academy blue */
+  color: #fff;           /* white text */
+  padding: 10px 20px;    /* spacing around text */
+  border-radius: 25px;   /* rounded pill shape */
+  text-decoration: none; /* remove underline */
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.number-link:hover {
+  background: #00c6ff;   /* lighter blue on hover */
+  transform: scale(1.05); /* gentle zoom effect */
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #003b8e;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: none; /* hidden by default */
+  transition: background 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+  background: #00c6ff;
+  transform: scale(1.1);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;              /* full viewport height */
+  overflow: hidden;
+}
+
+.carousel {
+  height: 100%;
+  position: relative;
+}
+
+.carousel .slides img {
+  width: 100%;
+  height: 100%;               /* fill hero height */
+  display: none;              /* hide all by default */
+  object-fit: cover;          /* fills hero section */
+  object-position: center;
+}
+
+.carousel .slides img.active {
+  display: block;             /* only active image shows */
+}
+
+/* Navigation arrows: centered on sides */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;                   /* vertical center */
+  transform: translateY(-50%);
+  bottom: auto;
+  width: 60px;                /* larger clickable area */
+  height: 60px;
+  background: rgba(0,0,0,0.4);/* semi-transparent circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.carousel-control-prev {
+  left: 20px;                 /* lock to left side */
+}
+
+.carousel-control-next {
+  right: 20px;                /* lock to right side */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 30px;            /* bigger arrow icons */
+  filter: invert(1);          /* make them white */
+}
+
+/* Overlay text stays centered */
+.hero-text {
+  position: absolute;
+  top: 50%;            
+  left: 50%;           
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;          
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
