@@ -165,13 +165,7 @@ section {
   background: #fff;
   border-radius: 20px;            /* rounded rectangle look */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: justify;            /* justify text inside */
-}
-
-
-.justify {
   text-align: justify;
-  line-height: 1.6;
 }
 
 /* =========================
@@ -179,12 +173,13 @@ section {
 ========================= */
 .project-card {
   background: #e6f0ff;
-  padding: 15px;       /* smaller, balanced padding */
-  margin: 15px auto;        /* auto centers the card */
+  padding: 15px 20px;             /* balanced inner spacing */
+  margin: 15px auto;              /* centers card inside section */
   border-radius: 12px;
   border-left: 6px solid #003b8e;
   transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 95%;           /* leaves space on left/right inside section */
+  max-width: 95%;                 /* leaves space inside section */
+  width: auto;                    /* don’t force full width */
 }
 
 .project-card:hover {
