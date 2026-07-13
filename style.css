@@ -1,3 +1,288 @@
+/* =========================
+   Base Styles
+========================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4ff;
+  color: #002b5c;
+}
+
+/* =========================
+   Fixed Header & Navigation
+========================= */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #003b8e;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.site-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00c6ff;
+  transform: scale(1.1);
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* =========================
+   Hero Section with Carousel
+========================= */
+.hero {
+  position: relative;
+  margin-top: 80px;        /* offset for fixed header */
+  aspect-ratio: 16 / 9;    /* lock hero to 16:9 ratio */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;     /* center content vertically */
+  justify-content: center;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel .slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .slides img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;    /* consistent ratio */
+  object-fit: contain;     /* no cropping */
+  background: #000;        /* fills empty space */
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .slides img.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+/* Navigation arrows */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.carousel-control-prev { left: 20px; }
+.carousel-control-next { right: 20px; }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 30px;
+  filter: invert(1);
+}
+
+/* Overlay text */
+.hero-text {
+  position: absolute;
+  bottom: 10%;               /* near bottom of hero */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+/* =========================
+   Section Styling (Rounded Rectangles)
+========================= */
+section {
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 1000px;              /* keeps content centered */
+  background: #fff;
+  border-radius: 20px;            /* rounded rectangle look */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.justify {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* =========================
+   Project Cards
+========================= */
+.project-card {
+  background: #e6f0ff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 15px;
+  border-left: 6px solid #003b8e;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   Profile Photo
+========================= */
+.profile-photo {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  float: left;
+  margin: 0 20px 10px 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  border: 3px solid #00c6ff;
+}
+
+/* =========================
+   Social Links (Contained)
+========================= */
+.social {
+  margin: 30px auto;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social ul li {
+  margin: 10px 0;
+}
+
+.social ul li a,
+.number-link {
+  display: inline-block;
+  background: #003b8e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.social ul li a:hover,
+.number-link:hover {
+  background: #00c6ff;
+  transform: scale(1.05);
+}
+
+/* =========================
+   Back to Top Button
+========================= */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #003b8e;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#backToTop:hover {
+  background: #00c6ff;
+  transform: scale(1.1);
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #003b8e;
+  color: #fff;
+  border-top: 3px solid #00c6ff;
+}
+
+/* =========================
+   Responsive Adjustments
+========================= */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -8,25 +293,19 @@
     right: 20px;
     padding: 10px;
     border-radius: 10px;
-    text-align: center;
-    max-width: 90%;       /* leave space on sides */
-  }
-
-  /* Show menu when .open is toggled */
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;      /* center horizontally */
+    text-align: center;       /* center text */
+    align-items: center;      /* center flex items */
     justify-content: center;  /* center vertically */
-    text-align: center;
-    max-width: 90%;           /* keep space after margins */
+  }
+  .nav-links.open {
+    display: flex;            /* show when toggled */
   }
 
   .nav-links li { margin: 10px 0; }
   .hamburger { display: block; }
 
   .hero {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 3;   /* more square ratio for phones */
   }
 
   .hero-text {
@@ -48,12 +327,11 @@
     padding: 20px;
     margin: 20px auto;
     border-radius: 15px;
-    text-align: center;
-    max-width: 90%;           /* keep space on sides */
+    text-align: center;       /* center content inside rounded rectangles */
   }
 
   .project-card {
-    text-align: left;         /* keep project text natural */
+    text-align: left;         /* keep project text aligned left inside card */
     width: 100%;
   }
 }
