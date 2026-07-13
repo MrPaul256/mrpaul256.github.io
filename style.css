@@ -139,21 +139,22 @@ body {
   filter: invert(1);
 }
 
-/* Overlay text */
+/* Text Overlay */
 .hero-text {
   position: absolute;
-  bottom: 10%;               /* near bottom of hero */
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;                  /* middle vertically */
+  left: 50%;                 /* middle horizontally */
+  transform: translate(-50%, -50%); /* shift back half width & height */
   color: #fff;
   text-align: center;
   z-index: 2;
   background: rgba(0,0,0,0.4);
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   max-width: 70%;
-   max-height: 50%;
+  max-height: 50%;
 }
+
 
  /* =========================
    Section Styling (Rounded Rectangles)
