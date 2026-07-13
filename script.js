@@ -1,10 +1,14 @@
-// Toggle mobile menu
+// =========================
+// Toggle Mobile Menu
+// =========================
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
   navLinks.style.display = (navLinks.style.display === "flex") ? "none" : "flex";
 }
 
-// Scroll animations
+// =========================
+// Scroll Animations
+// =========================
 document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(".fade-in, .slide-in");
 
@@ -19,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedElements.forEach(el => observer.observe(el));
 });
 
+// =========================
 // Back to Top + Logo Scroll
+// =========================
 document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.getElementById("backToTop");
   const logoLink = document.querySelector(".logo-link");
@@ -40,37 +46,57 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Carousel functionality
+// =========================
+// Carousel Functionality
+// =========================
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".carousel .slides img");
   const nextBtn = document.querySelector(".next");
   const prevBtn = document.querySelector(".prev");
   let index = 0;
+  let autoSlide;
 
   function showSlide(i) {
     slides.forEach((slide, idx) => {
-      slide.classList.toggle("active", idx === i);
+      slide.classList.remove("active");
+      if (idx === i) {
+        slide.classList.add("active");
+      }
     });
   }
 
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + slides.length) % slides.length;
-      showSlide(index);
-    });
-  }
-
-  setInterval(() => {
+  function nextSlide() {
     index = (index + 1) % slides.length;
     showSlide(index);
-  }, 5000);
+  }
 
+  function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  }
+
+  // Button controls
+  if (nextBtn) nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAutoSlide();
+  });
+
+  if (prevBtn) prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetAutoSlide();
+  });
+
+  // Auto slide every 5s
+  function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, 5000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+  }
+
+  // Initialize
   showSlide(index);
+  startAutoSlide();
 });
