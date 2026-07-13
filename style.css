@@ -159,8 +159,8 @@ body {
    Section Styling (Rounded Rectangles)
 ========================= */
 section {
-  padding: 40px;                  /* equal padding on all sides */
-  margin: 30px auto;              /* auto centers horizontally */
+  padding: 10px;                  /* equal padding on all sides */
+  margin: 5px auto;              /* auto centers horizontally */
   max-width: 100%;                 /* leaves 5% space left/right */
   background: #fff;
   border-radius: 20px;            /* rounded rectangle look */
