@@ -3,7 +3,9 @@
 // =========================
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
-  navLinks.style.display = (navLinks.style.display === "flex") ? "none" : "flex";
+  if (navLinks) {
+    navLinks.style.display = (navLinks.style.display === "flex") ? "none" : "flex";
+  }
 }
 
 // =========================
@@ -31,12 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const logoLink = document.querySelector(".logo-link");
 
   window.addEventListener("scroll", () => {
-    backToTop.style.display = (window.scrollY > 300) ? "block" : "none";
+    if (backToTop) {
+      backToTop.style.display = (window.scrollY > 300) ? "block" : "none";
+    }
   });
 
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  if (backToTop) {
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
   if (logoLink) {
     logoLink.addEventListener("click", (e) => {
@@ -51,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".carousel .slides img");
-  const nextBtn = document.querySelector(".next");
-  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".carousel-control-next");
+  const prevBtn = document.querySelector(".carousel-control-prev");
   let index = 0;
   let autoSlide;
 
@@ -97,6 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Initialize
-  showSlide(index);
-  startAutoSlide();
+  if (slides.length > 0) {
+    showSlide(index);
+    startAutoSlide();
+  }
 });
