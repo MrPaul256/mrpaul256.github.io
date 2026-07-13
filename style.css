@@ -165,7 +165,7 @@ section {
   background: #fff;
   border-radius: 20px;            /* rounded rectangle look */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;             /* center text inside */
+  text-align: justify;             /* center text inside */
 }
 
 .justify {
@@ -178,7 +178,7 @@ section {
 ========================= */
 .project-card {
   background: #e6f0ff;
-  padding: 15px 20px;       /* smaller, balanced padding */
+  padding: 15px;       /* smaller, balanced padding */
   margin: 15px auto;        /* auto centers the card */
   border-radius: 12px;
   border-left: 6px solid #003b8e;
