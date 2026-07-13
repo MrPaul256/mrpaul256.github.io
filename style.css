@@ -294,6 +294,9 @@ footer {
 /* =========================
    Responsive Adjustments
 ========================= */
+/* =========================
+   Responsive Adjustments
+========================= */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -304,7 +307,18 @@ footer {
     right: 20px;
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
   }
+
+  /* Show menu when .open is toggled */
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* center horizontally */
+    justify-content: center;  /* center vertically */
+    text-align: center;       /* center text */
+  }
+
   .nav-links li { margin: 10px 0; }
   .hamburger { display: block; }
 
@@ -325,4 +339,17 @@ footer {
   }
   .carousel-control-prev { left: 5px; }
   .carousel-control-next { right: 5px; }
+
+  section,
+  .social {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    text-align: center;       /* center content inside rounded rectangles */
+  }
+
+  .project-card {
+    text-align: left;         /* keep project text aligned left inside card */
+    width: 100%;
+  }
 }
