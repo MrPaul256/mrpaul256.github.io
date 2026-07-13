@@ -72,23 +72,35 @@ body {
 ========================= */
 .hero {
   position: relative;
-  margin-top: 80px;            /* offset for fixed header */
-  height: 100vh;               /* full viewport height */
+  margin-top: 80px;        /* offset for fixed header */
+  aspect-ratio: 16 / 9;    /* lock hero to 16:9 ratio */
+  width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start; /* push content to top */
+  justify-content: center;
 }
 
 .carousel {
+  width: 100%;
   height: 100%;
   position: relative;
 }
 
-.carousel .slides img {
+.carousel .slides {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0;                          /* start invisible */
-  transform: translateX(30px);         /* slight offset for gallery effect */
+}
+
+.carousel .slides img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;    /* consistent ratio */
+  object-fit: contain;     /* no cropping */
+  background: #000;        /* fills empty space */
+  opacity: 0;
+  transform: translateX(30px);
   transition: opacity 1s ease, transform 1s ease;
   position: absolute;
   top: 0;
@@ -96,8 +108,8 @@ body {
 }
 
 .carousel .slides img.active {
-  opacity: 1;                          /* fade in */
-  transform: translateX(0);            /* slide into place */
+  opacity: 1;
+  transform: translateX(0);
   z-index: 1;
 }
 
@@ -107,7 +119,6 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  bottom: auto;
   width: 60px;
   height: 60px;
   background: rgba(0,0,0,0.4);
@@ -131,15 +142,16 @@ body {
 /* Overlay text */
 .hero-text {
   position: absolute;
-  top: 50%;
+  top: 10%;                /* balanced below top */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   color: #fff;
   text-align: center;
   z-index: 2;
   background: rgba(0,0,0,0.4);
   padding: 20px;
   border-radius: 10px;
+  max-width: 90%;
 }
 
 /* =========================
@@ -275,6 +287,10 @@ footer {
   }
   .nav-links li { margin: 10px 0; }
   .hamburger { display: block; }
+
+  .hero {
+    aspect-ratio: 4 / 3;   /* more square ratio for phones */
+  }
 
   .hero-text {
     font-size: 16px;
