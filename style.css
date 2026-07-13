@@ -293,14 +293,8 @@ footer {
     right: 20px;
     padding: 10px;
     border-radius: 10px;
-    text-align: center;       /* center text */
-    align-items: center;      /* center flex items */
-    justify-content: center;  /* center vertically */
+    text-align: center; /* keep items centered */
   }
-  .nav-links.open {
-    display: flex;            /* show when toggled */
-  }
-
   .nav-links li { margin: 10px 0; }
   .hamburger { display: block; }
 
@@ -327,11 +321,5 @@ footer {
     padding: 20px;
     margin: 20px auto;
     border-radius: 15px;
-    text-align: center;       /* center content inside rounded rectangles */
-  }
-
-  .project-card {
-    text-align: left;         /* keep project text aligned left inside card */
-    width: 100%;
   }
 }
