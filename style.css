@@ -40,7 +40,7 @@ body {
 
 .site-title {
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 .nav-links {
@@ -149,9 +149,10 @@ body {
   text-align: center;
   z-index: 2;
   background: rgba(0,0,0,0.4);
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
-  max-width: 60%;
+  max-width: 70%;
+   max-height: 40%;
 }
 
   /* =========================
@@ -160,7 +161,7 @@ body {
 section {
   padding: 40px;                  /* equal padding on all sides */
   margin: 30px auto;              /* auto centers horizontally */
-  max-width: 90%;                 /* leaves 5% space left/right */
+  max-width: 100%;                 /* leaves 5% space left/right */
   background: #fff;
   border-radius: 20px;            /* rounded rectangle look */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
