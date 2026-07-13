@@ -293,7 +293,6 @@ footer {
     right: 20px;
     padding: 10px;
     border-radius: 10px;
-    text-align: center; /* keep items centered */
   }
   .nav-links li { margin: 10px 0; }
   .hamburger { display: block; }
