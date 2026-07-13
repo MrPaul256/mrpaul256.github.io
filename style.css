@@ -155,18 +155,19 @@ body {
    max-height: 40%;
 }
 
-  /* =========================
+ /* =========================
    Section Styling (Rounded Rectangles)
 ========================= */
 section {
-  padding: 10px;                  /* equal padding on all sides */
-  margin: 5px auto;              /* auto centers horizontally */
-  max-width: 100%;                 /* leaves 5% space left/right */
+  padding: 30px;                  /* equal padding inside */
+  margin: 20px auto;              /* auto centers horizontally */
+  max-width: 90%;                 /* leaves ~5% space on each side */
   background: #fff;
   border-radius: 20px;            /* rounded rectangle look */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: justify;             /* center text inside */
+  text-align: justify;            /* justify text inside */
 }
+
 
 .justify {
   text-align: justify;
