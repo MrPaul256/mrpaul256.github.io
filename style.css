@@ -335,3 +335,26 @@ footer {
     width: 100%;
   }
 }
+/* Keep About Me text justified */
+.justify {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* In mobile, don’t override .justify */
+@media (max-width: 768px) {
+  section,
+  .social {
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    text-align: left;   /* or remove this line */
+  }
+
+  .project-card {
+    text-align: left;
+    width: auto;        /* don’t force full width */
+    max-width: 95%;
+    margin: 15px auto;
+  }
+}
