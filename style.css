@@ -177,12 +177,12 @@ section {
 ========================= */
 .project-card {
   background: #e6f0ff;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 15px;
+  padding: 15px 20px;       /* smaller, balanced padding */
+  margin: 15px auto;        /* auto centers the card */
+  border-radius: 12px;
   border-left: 6px solid #003b8e;
   transition: transform 0.3s, box-shadow 0.3s;
-   justify-content: center;
+  max-width: 95%;           /* leaves space on left/right inside section */
 }
 
 .project-card:hover {
