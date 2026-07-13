@@ -139,7 +139,26 @@ body {
   filter: invert(1);
 }
 
-/* Overlay text */
+/* Overlay text (choose one version) */
+
+/* Centered overlay */
+.hero-text {
+  position: absolute;
+  top: 50%;                  /* middle of hero */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+/* --- OR --- */
+
+/* Bottom overlay
 .hero-text {
   position: absolute;
   bottom: 10%;               /* near bottom of hero */
@@ -153,22 +172,23 @@ body {
   border-radius: 10px;
   max-width: 90%;
 }
+*/
 
 /* =========================
-   Section Styling (Rounded Rectangles)
+   Section Styling
 ========================= */
 section {
   padding: 40px;
   margin: 30px auto;
-  max-width: 1000px;              /* keeps content centered */
+  max-width: 1000px;
   background: #fff;
-  border-radius: 20px;            /* rounded rectangle look */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .justify {
   text-align: justify;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* =========================
@@ -178,7 +198,7 @@ section {
   background: #e6f0ff;
   padding: 20px;
   margin: 15px 0;
-  border-radius: 15px;
+  border-radius: 12px;
   border-left: 6px solid #003b8e;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -207,17 +227,8 @@ section {
 }
 
 /* =========================
-   Social Links (Contained)
+   Social Links
 ========================= */
-.social {
-  margin: 30px auto;
-  max-width: 1000px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 30px;
-}
-
 .social ul {
   list-style: none;
   padding: 0;
@@ -314,11 +325,4 @@ footer {
   }
   .carousel-control-prev { left: 5px; }
   .carousel-control-next { right: 5px; }
-
-  section,
-  .social {
-    padding: 20px;
-    margin: 20px auto;
-    border-radius: 15px;
-  }
 }
