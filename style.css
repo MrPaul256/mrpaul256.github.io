@@ -151,21 +151,20 @@ body {
   background: rgba(0,0,0,0.4);
   padding: 20px;
   border-radius: 10px;
-  max-width: 80%;
+  max-width: 60%;
 }
 
-/* =========================
+  /* =========================
    Section Styling (Rounded Rectangles)
 ========================= */
 section {
-  padding: 40px;
-  margin: 30px auto;
-  max-width: 1000px;              /* keeps content centered */
+  padding: 40px;                  /* equal padding on all sides */
+  margin: 30px auto;              /* auto centers horizontally */
+  max-width: 90%;                 /* leaves 5% space left/right */
   background: #fff;
   border-radius: 20px;            /* rounded rectangle look */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    align-items: center;     
-  justify-content: center;
+  text-align: center;             /* center text inside */
 }
 
 .justify {
