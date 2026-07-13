@@ -40,7 +40,7 @@ body {
 
 .site-title {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .nav-links {
@@ -121,7 +121,7 @@ body {
   transform: translateY(-50%);
   width: 60px;
   height: 60px;
-  background: rgba(0,0,0,0.4);
+  background: #00FF7F; /* sky green shade */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -151,7 +151,7 @@ body {
   background: rgba(0,0,0,0.4);
   padding: 20px;
   border-radius: 10px;
-  max-width: 90%;
+  max-width: 80%;
 }
 
 /* =========================
@@ -164,6 +164,8 @@ section {
   background: #fff;
   border-radius: 20px;            /* rounded rectangle look */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    align-items: center;     
+  justify-content: center;
 }
 
 .justify {
@@ -181,6 +183,7 @@ section {
   border-radius: 15px;
   border-left: 6px solid #003b8e;
   transition: transform 0.3s, box-shadow 0.3s;
+   justify-content: center;
 }
 
 .project-card:hover {
