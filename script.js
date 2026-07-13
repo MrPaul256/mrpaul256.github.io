@@ -4,7 +4,7 @@
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
   if (navLinks) {
-    navLinks.style.display = (navLinks.style.display === "flex") ? "none" : "flex";
+    navLinks.classList.toggle("open"); // toggle class instead of inline style
   }
 }
 
