@@ -1,1 +1,4 @@
-https://mrpaul256.github.io/
+User-agent: *
+Allow: /
+
+Sitemap: https://mrpaul256.github.io/sitemap.xml
