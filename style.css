@@ -172,6 +172,12 @@ section {
 /* =========================
    Project Cards
 ========================= */
+.project-link {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* keeps original text color */
+  display: block;          /* makes the whole card clickable */
+}
+
 .project-card {
   background: #e6f0ff;
   padding: 15px 20px;             /* balanced inner spacing */
