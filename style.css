@@ -142,7 +142,7 @@ body {
 /* Text Overlay */
 .hero-text {
   position: absolute;
-  top: 50%;                  /* middle vertically */
+  top: 35%;                  /* middle vertically */
   left: 50%;                 /* middle horizontally */
   transform: translate(-50%, -50%); /* shift back half width & height */
   color: #fff;
