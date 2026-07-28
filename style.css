@@ -64,10 +64,13 @@ body {
       transform: scale(1.1);
     }
     .hamburger {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
+  display: block;          /* ensure it shows on mobile */
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;      /* allow z-index to apply */
+  z-index: 2000;           /* higher than overlay text */
+  color: #fff;             /* visible on dark backgrounds */
+}
 
 
 /* =========================
@@ -160,7 +163,7 @@ body {
   transform: translate(-50%, -50%); /* shift back half width & height */
   color: #fff;
   text-align: center;
-  z-index: 2;
+  z-index: 1000;
   background: rgba(0,0,0,0.4);
   padding: 15px;
   border-radius: 10px;
