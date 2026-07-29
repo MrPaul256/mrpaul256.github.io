@@ -216,24 +216,27 @@ section {
    Project Cards
 ========================= */
 .project-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+  text-decoration: none;     /* remove underline */
+  color: inherit;            /* inherit text color */
+  display: block;            /* make entire card clickable */
 }
 
+/* Base card styling */
 .project-card {
-  background: #e6f0ff;
-  padding: 15px 20px;
-  margin: 15px auto;
-  border-radius: 12px;
-  border-left: 6px solid #003b8e;
-  max-width: 95%;
+  background: #e6f0ff;       /* soft blue background */
+  padding: 20px;             /* balanced inner spacing */
+  margin: 20px auto;         /* consistent spacing between cards */
+  border-radius: 12px;       /* smooth rounded corners */
+  border-left: 6px solid #003b8e; /* accent border */
+  max-width: 95%;            /* keep cards centered */
   width: auto;
 
   /* Animation base state */
   opacity: 0;
-  transform: translateX(-100px);   /* off-screen left */
-  transition: all 0.8s ease;
+  transform: translateX(-100px);   /* start off-screen left */
+  transition: transform 0.8s ease, 
+              opacity 0.8s ease, 
+              box-shadow 0.3s ease;
 }
 
 /* Fly-in when visible */
@@ -250,8 +253,8 @@ section {
 
 /* Hover effect */
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transform: translateY(-5px);     /* subtle lift */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* soft shadow */
 }
 
 /* =========================
