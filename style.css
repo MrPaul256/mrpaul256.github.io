@@ -216,22 +216,39 @@ section {
    Project Cards
 ========================= */
 .project-link {
-  text-decoration: none;   /* removes underline */
-  color: inherit;          /* keeps original text color */
-  display: block;          /* makes the whole card clickable */
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .project-card {
   background: #e6f0ff;
-  padding: 15px 20px;             /* balanced inner spacing */
-  margin: 15px auto;              /* centers card inside section */
+  padding: 15px 20px;
+  margin: 15px auto;
   border-radius: 12px;
   border-left: 6px solid #003b8e;
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 95%;                 /* leaves space inside section */
-  width: auto;                    /* don’t force full width */
+  max-width: 95%;
+  width: auto;
+
+  /* Animation base state */
+  opacity: 0;
+  transform: translateX(-100px);   /* off-screen left */
+  transition: all 0.8s ease;
 }
 
+/* Fly-in when visible */
+.project-card.visible {
+  opacity: 1;
+  transform: translateX(0);        /* slide into place */
+}
+
+/* Fly-out to the right when leaving */
+.project-card.flyout {
+  opacity: 0;
+  transform: translateX(100px);    /* slide out to the right */
+}
+
+/* Hover effect */
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
