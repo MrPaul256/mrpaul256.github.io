@@ -3,10 +3,33 @@
 // =========================
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
+  const hamburger = document.querySelector(".hamburger");
+
   if (navLinks) {
-    navLinks.classList.toggle("open"); // toggle class instead of inline style
+    navLinks.classList.toggle("open");
+  }
+  if (hamburger) {
+    hamburger.classList.toggle("active"); // toggles ☰ ↔ ✖
   }
 }
+
+// =========================
+// Close menu when clicking a link
+// =========================
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    const navLinks = document.getElementById("navLinks");
+    const hamburger = document.querySelector(".hamburger");
+
+    if (navLinks) {
+      navLinks.classList.remove("open");
+    }
+    if (hamburger) {
+      hamburger.classList.remove("active");
+    }
+  });
+});
+
 
 // =========================
     // Header Scroll Effect
