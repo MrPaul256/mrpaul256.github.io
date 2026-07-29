@@ -18,7 +18,7 @@ body {
       background: rgba(0,0,0,0.4); /* transparent at top */
       backdrop-filter: blur(6px);
       color: #fff;
-      z-index: 2;
+      z-index: 3000;
       height: 60px;
       transition: all 0.3s ease;
     }
@@ -68,7 +68,7 @@ body {
   font-size: 24px;
   cursor: pointer;
   position: relative;      /* allow z-index to apply */
-  z-index: 2000;           /* higher than overlay text */
+  z-index: 4000;           /* higher than overlay text */
   color: #fff;             /* visible on dark backgrounds */
 }
 
@@ -142,7 +142,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 1500;
   cursor: pointer;
 }
 
