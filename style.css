@@ -225,27 +225,25 @@ body {
   max-height: 50%;
 }
 
-/* Typewriter effect */
 .hero-text h1 {
-  overflow: hidden;              /* hide text until revealed */
-  border-right: 3px solid #fff;  /* blinking cursor */
-  white-space: nowrap;           /* keep text on one line */
+  border-right: 3px solid #fff;   /* blinking cursor */
+  white-space: pre-wrap;          /* allow wrapping & line breaks */
+  overflow: hidden;
   margin: 0 auto;
   letter-spacing: 2px;
-  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  animation: blinkCursor 0.75s step-end infinite;
+  transition: opacity 1s ease;    /* smooth fade */
 }
 
-/* Typing animation */
-@keyframes typing {
-  from { width: 0 }
-  to   { width: 100% }
+.hero-text h1.fade-out {
+  opacity: 0;
 }
 
-/* Cursor blink */
-@keyframes blink {
+@keyframes blinkCursor {
   from, to { border-color: transparent }
   50% { border-color: #fff }
 }
+
 
  /* =========================
    Section Styling (Rounded Rectangles)
