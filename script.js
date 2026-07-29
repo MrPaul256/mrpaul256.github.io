@@ -194,10 +194,10 @@ document.addEventListener("DOMContentLoaded", () => {
   "Welcome to My Digital Portfolio.",
   "I'm Paul Ssekanaabi, aka Mr. Paul 🇺🇬",
   "I'm an ICT Educator.",
-  "I build websites and digital solutions.",
-  "I love web development in my free time.",
-  "Let's connect 🤝",
-  "Share your tech challenge, and let's build solutions together."
+  "I Build Websites and Digital Solutions.",
+  "Let's Connect 🤝",
+  "Share your Tech Challenge, and Let's Build Solutions Together.",
+    "Thank you for Visiting 🤝🤝".
   ];
 
   let paragraphIndex = 0;
