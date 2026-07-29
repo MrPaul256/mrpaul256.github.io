@@ -63,14 +63,41 @@ body {
       color: #00c6ff;
       transform: scale(1.1);
     }
-    .hamburger {
-  display: block;          /* ensure it shows on mobile */
+    /* Hamburger Menu */
+.hamburger {
+  display: none;            /* hidden by default on desktop */
   font-size: 24px;
   cursor: pointer;
-  position: relative;      /* allow z-index to apply */
-  z-index: 4000;           /* higher than overlay text */
-  color: #fff;             /* visible on dark backgrounds */
+  position: relative;       /* allow z-index to apply */
+  z-index: 4000;            /* higher than overlay text */
+  color: #fff;              /* visible on dark backgrounds */
 }
+
+/* Show hamburger only on small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;         /* visible on phones/tablets */
+  }
+
+  /* Hide full nav links on small screens */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,59,142,0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 0 0 0 10px;
+  }
+
+  /* Show nav links when toggled */
+  .nav-links.open {
+    display: flex;
+  }
+}
+
 
 
 /* =========================
