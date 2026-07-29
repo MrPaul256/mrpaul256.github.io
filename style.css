@@ -260,28 +260,43 @@ section {
 
   /* Animation base state */
   opacity: 0;
-  transform: translateX(-100px);   /* start off-screen left */
   transition: transform 0.8s ease, 
               opacity 0.8s ease, 
               box-shadow 0.3s ease;
 }
 
-/* Fly-in when visible */
-.project-card.visible {
+/* Fly-in when scrolling down (from left) */
+.project-card.visible-left {
   opacity: 1;
-  transform: translateX(0);        /* slide into place */
+  animation: flyInLeft 0.8s forwards;
 }
 
-/* Fly-out to the right when leaving */
+/* Fly-in when scrolling up (from right) */
+.project-card.visible-right {
+  opacity: 1;
+  animation: flyInRight 0.8s forwards;
+}
+
+/* Fly-out (reset state) */
 .project-card.flyout {
   opacity: 0;
-  transform: translateX(100px);    /* slide out to the right */
 }
 
 /* Hover effect */
 .project-card:hover {
   transform: translateY(-5px);     /* subtle lift */
   box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* soft shadow */
+}
+
+/* Keyframes for animations */
+@keyframes flyInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes flyInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
 }
 
 /* =========================
