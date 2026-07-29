@@ -173,4 +173,15 @@ const cardObserver = new IntersectionObserver(entries => {
   lastScrollY = window.scrollY;
 }, { threshold: 0.2 });
 
+// Force initial check on page load
+window.addEventListener("load", () => {
+  projectCards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      card.classList.add("visible-left"); // default direction
+    }
+  });
+});
+
+
 projectCards.forEach(card => cardObserver.observe(card));
