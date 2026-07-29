@@ -143,36 +143,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
- // Fly-in and Fly-out Animation for Project Cards
+ // =========================
+// Fly-in and Fly-out Animation for Project Cards
+// =========================
 const projectCards = document.querySelectorAll(".project-card");
+let lastScrollY = window.scrollY; // track scroll direction
 
 const cardObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Card enters viewport → fly in
-      entry.target.classList.add("visible");
-      entry.target.classList.remove("flyout");
-    } else {
-      // Card leaves viewport (scrolling up) → fly out right
-      if (window.scrollY > entry.target.offsetTop) {
-        entry.target.classList.add("flyout");
-        entry.target.classList.remove("visible");
+      // Detect scroll direction
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down → fly in from left
+        entry.target.classList.add("visible-left");
+        entry.target.classList.remove("visible-right", "flyout");
+      } else {
+        // Scrolling up → fly in from right
+        entry.target.classList.add("visible-right");
+        entry.target.classList.remove("visible-left", "flyout");
       }
+    } else {
+      // Card leaves viewport → reset
+      entry.target.classList.add("flyout");
+      entry.target.classList.remove("visible-left", "visible-right");
     }
   });
+
+  // Update scroll position after processing
+  lastScrollY = window.scrollY;
 }, { threshold: 0.2 });
 
 projectCards.forEach(card => cardObserver.observe(card));
-
-// =========================
-    // Fly-in Section Animation
-    // =========================
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.2 });
-    sections.forEach(sec => observer.observe(sec));
