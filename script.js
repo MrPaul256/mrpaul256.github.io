@@ -183,5 +183,56 @@ window.addEventListener("load", () => {
   });
 });
 
+// =========================
+// Typewriter Animation with Fade
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  const typewriterElement = document.getElementById("typewriter");
+
+  // Paragraphs to cycle through
+  const paragraphs = [
+    "Welcome to My Digital Portfolio"
+  ];
+
+  let paragraphIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const currentText = paragraphs[paragraphIndex];
+
+    if (!isDeleting) {
+      // Typing forward
+      typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentText.length) {
+        // Pause before fade out
+        setTimeout(() => {
+          typewriterElement.classList.add("fade-out");
+          setTimeout(() => {
+            isDeleting = true;
+            typeEffect();
+          }, 1000); // fade duration
+        }, 2000); // pause before fade
+        return;
+      }
+    } else {
+      // Reset after fade out
+      typewriterElement.textContent = "";
+      charIndex = 0;
+      isDeleting = false;
+      paragraphIndex = (paragraphIndex + 1) % paragraphs.length;
+
+      // Fade back in before typing next
+      typewriterElement.classList.remove("fade-out");
+    }
+
+    const speed = 100; // typing speed
+    setTimeout(typeEffect, speed);
+  }
+
+  typeEffect();
+});
 
 projectCards.forEach(card => cardObserver.observe(card));
