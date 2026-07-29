@@ -9,6 +9,17 @@ function toggleMenu() {
 }
 
 // =========================
+    // Header Scroll Effect
+    // =========================
+    document.addEventListener("scroll", () => {
+      const header = document.querySelector(".fixed-header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+// =========================
 // Scroll Animations
 // =========================
 document.addEventListener("DOMContentLoaded", () => {
@@ -108,3 +119,37 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoSlide();
   }
 });
+
+ // Fly-in and Fly-out Animation for Project Cards
+const projectCards = document.querySelectorAll(".project-card");
+
+const cardObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Card enters viewport → fly in
+      entry.target.classList.add("visible");
+      entry.target.classList.remove("flyout");
+    } else {
+      // Card leaves viewport (scrolling up) → fly out right
+      if (window.scrollY > entry.target.offsetTop) {
+        entry.target.classList.add("flyout");
+        entry.target.classList.remove("visible");
+      }
+    }
+  });
+}, { threshold: 0.2 });
+
+projectCards.forEach(card => cardObserver.observe(card));
+
+// =========================
+    // Fly-in Section Animation
+    // =========================
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(sec => observer.observe(sec));
