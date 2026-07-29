@@ -191,7 +191,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Paragraphs to cycle through
   const paragraphs = [
-    "Welcome to My Digital Portfolio"
+  "Welcome to My Digital Portfolio.",
+  "I'm Paul Ssekanaabi, aka Mr. Paul 🇺🇬",
+  "I'm an ICT Educator.",
+  "I build websites and digital solutions.",
+  "I love web development in my free time.",
+  "Let's connect 🤝",
+  "Share your tech challenge, and let's build solutions together."
   ];
 
   let paragraphIndex = 0;
