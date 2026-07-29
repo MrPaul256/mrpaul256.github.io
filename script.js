@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   "I Build Websites and Digital Solutions.",
   "Let's Connect 🤝",
   "Share your Tech Challenge, and Let's Build Solutions Together.",
-    "Thank you for Visiting 🤝🤝".
+  "Thank you for Visiting 🤝🤝."
   ];
 
   let paragraphIndex = 0;
