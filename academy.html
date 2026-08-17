@@ -207,6 +207,148 @@
     .download-btn:hover {
       background: #0055cc;
     }
+
+    /* Holiday Work CTA button (sits right under the fixed header) */
+    .holiday-cta-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto 0 auto;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    .holiday-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffd700;
+      color: #003b8e;
+      font-weight: bold;
+      font-size: 1.05em;
+      padding: 14px 26px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,59,142,0.25);
+      transition: transform 0.2s ease, background 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .holiday-cta-btn:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Holiday Work section */
+    #holiday-work {
+      scroll-margin-top: 230px; /* so the fixed header doesn't cover it when jumped to */
+    }
+
+    .holiday-intro {
+      background: #f1f6ff;
+      border-left: 4px solid #003b8e;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .holiday-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .holiday-card {
+      background: #f9fbff;
+      border: 1px solid #dbe6fa;
+      border-radius: 10px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .holiday-card h3 {
+      margin: 0;
+      color: #003b8e;
+      font-size: 1.05em;
+    }
+
+    .holiday-card p {
+      margin: 0;
+      font-size: 0.92em;
+      color: #333;
+      flex-grow: 1;
+    }
+
+    .holiday-card-btn {
+      display: inline-block;
+      text-align: center;
+      padding: 9px 14px;
+      background: #003b8e;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9em;
+      transition: background 0.3s ease;
+    }
+
+    .holiday-card-btn:hover {
+      background: #0055cc;
+    }
+
+    .whatsapp-banner {
+      margin-top: 24px;
+      background: #e9fff1;
+      border: 1px solid #b6f0c9;
+      border-radius: 10px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .whatsapp-banner p {
+      margin: 0;
+      color: #1a3b2f;
+      font-size: 0.95em;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1ebe57;
+    }
+    .detail-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .detail-card img {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .detail-card p {
+      margin: 0;
+    }
   </style>
 </head>
 <body>
@@ -224,7 +366,46 @@
   </div>
 </header>
 
+  <!-- Student Holiday Work CTA -->
+  <div class="holiday-cta-wrap">
+    <a href="#holiday-work" class="holiday-cta-btn">📚 Students Holiday Work</a>
+  </div>
+
   <main>
+    <!-- Student Holiday Work section -->
+    <section class="section" id="holiday-work">
+      <h2>Students Holiday Work</h2>
+      <div class="holiday-intro">
+        <p>Download the holiday work packs below and work through them at your own pace. Each pack is a PDF you can open on your phone, tablet, or computer — no login needed. If you get stuck on anything, message me directly on WhatsApp (button below) and I'll help you out.</p>
+      </div>
+
+      <div class="holiday-grid">
+        <!-- Duplicate this card block for each subject/pack you upload -->
+        <div class="holiday-card">
+          <h3>Word &amp; PowerPoint Pack</h3>
+          <p>Formatting exercises, a mini report task, and a presentation to build from scratch.</p>
+          <a href="holiday-work/word-powerpoint-pack.pdf" download class="holiday-card-btn">Download PDF</a>
+        </div>
+
+        <div class="holiday-card">
+          <h3>Excel Pack</h3>
+          <p>Formula practice, a small budget sheet task, and an intro to Mail Merge.</p>
+          <a href="holiday-work/excel-pack.pdf" download class="holiday-card-btn">Download PDF</a>
+        </div>
+
+        <div class="holiday-card">
+          <h3>Web Design Pack</h3>
+          <p>Build a simple responsive page using the HTML &amp; CSS covered in class.</p>
+          <a href="holiday-work/web-design-pack.pdf" download class="holiday-card-btn">Download PDF</a>
+        </div>
+      </div>
+
+      <div class="whatsapp-banner">
+        <p>Need help with any task above? Reach out any time — same WhatsApp number as on the home page.</p>
+        <a href="https://wa.me/YOURNUMBERHERE" target="_blank" rel="noopener" class="whatsapp-btn">💬 Message on WhatsApp</a>
+      </div>
+    </section>
+
     <!-- Scrolling icons row with captions -->
     <div class="scrolling-row">
       <div class="scrolling-content">
@@ -241,19 +422,19 @@
           <p>PowerPoint</p>
         </div>
         <div class="scrolling-item">
-          <img src="images/access.png" alt="Word">
+          <img src="images/access.png" alt="Access">
           <p>Microsoft Access</p>
         </div>
         <div class="scrolling-item">
-          <img src="images/ew.png" alt="Excel">
+          <img src="images/ew.png" alt="Expression Web">
           <p>Microsoft Expression Web4</p>
         </div>
         <div class="scrolling-item">
-          <img src="images/np.png" alt="Excel">
+          <img src="images/np.png" alt="Notepad++ and Sublime Text">
           <p>HTML Basics with <br> Notepad++ & Sublime Text</p>
         </div>
         <div class="scrolling-item">
-          <img src="images/wp.png" alt="PowerPoint">
+          <img src="images/wp.png" alt="WordPress">
           <p>WordPress</p>
         </div>
       </div>
@@ -276,12 +457,30 @@
 
     <section class="section">
       <h2>Important Details</h2>
-      <p><strong>Word &amp; PowerPoint.</strong> Document formatting, page layout design, and presentation delivery skills, aimed at producing polished, professional-grade output.</p>
-      <p><strong>Excel.</strong> Beyond formulas and charts, learners cover VBA automation, Mail Merge workflows, and structured data analysis techniques used in real office environments.</p>
-      <p><strong>Access.</strong> Database design fundamentals, including table structure, query building, and report generation for organised data management.</p>
-      <p><strong>Web Design.</strong> Practical CSS skills — animations, hover effects, and responsive media queries — that let learners build sites which look and behave well on any screen size.</p>
-      <p><strong>PHP &amp; MySQL.</strong> The backend logic powering the academy's school report card system, giving learners a concrete example of how a real, functioning application is built end to end.</p>
-      <p><strong>AI Assistant Development.</strong> Practical guidance on integrating AI tools with social media presence and brand identity, reflecting current, in-demand digital skills.</p>
+      <div class="detail-card">
+        <img src="images/word.png" alt="Word icon">
+        <p><strong>Word &amp; PowerPoint.</strong> Document formatting, page layout design, and presentation delivery skills, aimed at producing polished, professional-grade output.</p>
+      </div>
+      <div class="detail-card">
+        <img src="images/excel.png" alt="Excel icon">
+        <p><strong>Excel.</strong> Beyond formulas and charts, learners cover VBA automation, Mail Merge workflows, and structured data analysis techniques used in real office environments.</p>
+      </div>
+      <div class="detail-card">
+        <img src="images/access.png" alt="Access icon">
+        <p><strong>Access.</strong> Database design fundamentals, including table structure, query building, and report generation for organised data management.</p>
+      </div>
+      <div class="detail-card">
+        <img src="images/np.png" alt="Web design icon">
+        <p><strong>Web Design.</strong> Practical CSS skills — animations, hover effects, and responsive media queries — that let learners build sites which look and behave well on any screen size.</p>
+      </div>
+      <div class="detail-card">
+        <img src="images/php-mysql.png" alt="PHP and MySQL icon">
+        <p><strong>PHP &amp; MySQL.</strong> The backend logic powering the academy's school report card system, giving learners a concrete example of how a real, functioning application is built end to end.</p>
+      </div>
+      <div class="detail-card">
+        <img src="images/ai.png" alt="AI assistant icon">
+        <p><strong>AI Assistant Development.</strong> Practical guidance on integrating AI tools with social media presence and brand identity, reflecting current, in-demand digital skills.</p>
+      </div>
     </section>
 
     <section class="section">
