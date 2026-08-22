@@ -10,6 +10,44 @@ content="Official portfolio of Mr. Paul, an ICT Teacher, Web Developer, AI Train
 	<!-- Site Icon -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
+  <style>
+    /* Students Holiday Work CTA (self-contained, does not touch style.css) */
+    .holiday-cta-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 22px 15px 6px;
+    }
+    .holiday-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffd700;
+      color: #003b8e;
+      font-weight: bold;
+      font-size: 1.05rem;
+      padding: 14px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,59,142,0.3);
+      border: 2px solid #003b8e;
+      animation: holiday-pulse 2.4s ease-in-out infinite;
+    }
+    .holiday-cta-btn:hover {
+      background: #003b8e;
+      color: #ffd700;
+      animation-play-state: paused;
+    }
+    @keyframes holiday-pulse {
+      0%, 100% { box-shadow: 0 4px 14px rgba(0,59,142,0.3); }
+      50% { box-shadow: 0 4px 22px rgba(0,59,142,0.6); }
+    }
+    @media (max-width: 576px) {
+      .holiday-cta-btn { width: 100%; justify-content: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .holiday-cta-btn { animation: none; }
+    }
+  </style>
 </head>
 <body id="top">
 
@@ -24,6 +62,7 @@ content="Official portfolio of Mr. Paul, an ICT Teacher, Web Developer, AI Train
       <ul class="nav-links" id="navLinks">
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="academy.html#holiday-work">Holiday Work</a></li>
         <li><a href="#social">Social Media</a></li>
       </ul>
     </nav>
@@ -48,8 +87,10 @@ content="Official portfolio of Mr. Paul, an ICT Teacher, Web Developer, AI Train
   </div>
 </section>
 
-
-
+<!-- Students Holiday Work CTA -->
+<div class="holiday-cta-wrap">
+  <a href="academy.html#holiday-work" class="holiday-cta-btn">🎓 Students Holiday Work</a>
+</div>
 
 <!-- About -->
   <section id="about" class="about">
