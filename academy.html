@@ -298,6 +298,95 @@
       background: #0055cc;
     }
 
+    /* ICT Holiday Work class cards (Senior One - Six) */
+    .ict-holiday-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 20px;
+      margin-top: 6px;
+    }
+
+    .ict-class-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      background: linear-gradient(160deg, #ffffff 0%, #f1f6ff 100%);
+      border: 1px solid #dbe6fa;
+      border-radius: 16px;
+      padding: 26px 16px 20px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .ict-class-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #003b8e, #ffd700);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+
+    .ict-class-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 14px 28px rgba(0,59,142,0.25);
+      border-color: #ffd700;
+    }
+
+    .ict-class-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .ict-class-badge {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #003b8e, #0067e0);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.15em;
+      box-shadow: 0 4px 10px rgba(0,59,142,0.35);
+      transition: transform 0.3s ease;
+    }
+
+    .ict-class-card:hover .ict-class-badge {
+      transform: scale(1.1) rotate(-4deg);
+    }
+
+    .ict-class-card h3 {
+      margin: 4px 0 0;
+      color: #003b8e;
+      font-size: 1.05em;
+    }
+
+    .ict-class-card .ict-class-tag {
+      font-size: 0.78em;
+      color: #6c7a94;
+      margin-bottom: 4px;
+    }
+
+    .ict-class-card .holiday-card-btn {
+      margin-top: 6px;
+      background: #ffd700;
+      color: #003b8e;
+      box-shadow: 0 3px 8px rgba(0,59,142,0.2);
+    }
+
+    .ict-class-card:hover .holiday-card-btn {
+      background: #003b8e;
+      color: #ffd700;
+    }
+
     .whatsapp-banner {
       margin-top: 24px;
       background: #e9fff1;
@@ -379,25 +468,48 @@
         <p>Download the holiday work packs below and work through them at your own pace. Each pack is a PDF you can open on your phone, tablet, or computer — no login needed. If you get stuck on anything, message me directly on WhatsApp (button below) and I'll help you out.</p>
       </div>
 
-      <div class="holiday-grid">
-        <!-- Duplicate this card block for each subject/pack you upload -->
-        <div class="holiday-card">
-          <h3>Word &amp; PowerPoint Pack</h3>
-          <p>Formatting exercises, a mini report task, and a presentation to build from scratch.</p>
-          <a href="holiday-work/word-powerpoint-pack.pdf" download class="holiday-card-btn">Download PDF</a>
-        </div>
+      <div class="ict-holiday-grid">
+        <a href="holiday/S1-ICT.PDF" target="_blank" rel="noopener" class="ict-class-card">
+          <div class="ict-class-badge">S1</div>
+          <div class="ict-class-tag">ICT Holiday Work</div>
+          <h3>Senior One</h3>
+          <span class="holiday-card-btn">📄 Download PDF</span>
+        </a>
 
-        <div class="holiday-card">
-          <h3>Excel Pack</h3>
-          <p>Formula practice, a small budget sheet task, and an intro to Mail Merge.</p>
-          <a href="holiday-work/excel-pack.pdf" download class="holiday-card-btn">Download PDF</a>
-        </div>
+        <a href="holiday/S2-ICT.PDF" target="_blank" rel="noopener" class="ict-class-card">
+          <div class="ict-class-badge">S2</div>
+          <div class="ict-class-tag">ICT Holiday Work</div>
+          <h3>Senior Two</h3>
+          <span class="holiday-card-btn">📄 Download PDF</span>
+        </a>
 
-        <div class="holiday-card">
-          <h3>Web Design Pack</h3>
-          <p>Build a simple responsive page using the HTML &amp; CSS covered in class.</p>
-          <a href="holiday-work/web-design-pack.pdf" download class="holiday-card-btn">Download PDF</a>
-        </div>
+        <a href="holiday/S3-ICT.PDF" target="_blank" rel="noopener" class="ict-class-card">
+          <div class="ict-class-badge">S3</div>
+          <div class="ict-class-tag">ICT Holiday Work</div>
+          <h3>Senior Three</h3>
+          <span class="holiday-card-btn">📄 Download PDF</span>
+        </a>
+
+        <a href="holiday/S4-ICT.PDF" target="_blank" rel="noopener" class="ict-class-card">
+          <div class="ict-class-badge">S4</div>
+          <div class="ict-class-tag">ICT Holiday Work</div>
+          <h3>Senior Four</h3>
+          <span class="holiday-card-btn">📄 Download PDF</span>
+        </a>
+
+        <a href="holiday/S5-ICT.PDF" target="_blank" rel="noopener" class="ict-class-card">
+          <div class="ict-class-badge">S5</div>
+          <div class="ict-class-tag">ICT Holiday Work</div>
+          <h3>Senior Five</h3>
+          <span class="holiday-card-btn">📄 Download PDF</span>
+        </a>
+
+        <a href="holiday/S6-ICT.PDF" target="_blank" rel="noopener" class="ict-class-card">
+          <div class="ict-class-badge">S6</div>
+          <div class="ict-class-tag">ICT Holiday Work</div>
+          <h3>Senior Six</h3>
+          <span class="holiday-card-btn">📄 Download PDF</span>
+        </a>
       </div>
 
       <div class="whatsapp-banner">
